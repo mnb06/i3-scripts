@@ -1,0 +1,12 @@
+# Set monitors modes
+xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 240 --right-of DisplayPort-0
+xrandr --output DisplayPort-0 --mode 1920x1080 --left-of HDMI-A-0
+
+# Add cs resolutions
+xrandr --newmode "1280x1024_240.00"  508.75  1280 1400 1536 1792  1024 1027 1034 1184 -hsync +vsync
+xrandr --newmode "1280x960_240.00"  477.00  1280 1400 1536 1792  960 963 967 1110 -hsync +vsync
+xrandr --newmode "1440x1080_240.00"  603.50  1440 1568 1728 2016  1080 1083 1087 1248 -hsync +vsync
+
+xrandr --addmode HDMI-A-0 1280x1024_240.00
+xrandr --addmode HDMI-A-0 1280x960_240.00
+xrandr --addmode HDMI-A-0 1440x1080_240.00
